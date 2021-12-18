@@ -1,7 +1,3 @@
-// alert('Hello world')
-// confirm()
-// const value = prompt()
-// console.log('You put in ' + value)
 let playerWins = 0
 let playerLosses = 0
 let draws = 0
@@ -13,8 +9,9 @@ function updateScores() {
 }
 
 function play() {
-  const randomNumber = Math.floor(Math.random() * 3)
-  const computersValue = 'RPS'.charAt(randomNumber)
+  const choices = 'RPS'
+  const randomNumber = Math.floor(Math.random() * choices.length)
+  const computersValue = choices.charAt(randomNumber)
   const playersValue = prompt('Enter R, P or S')
   if (playersValue === 'R') {
     if (computersValue === 'R') {
